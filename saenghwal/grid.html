@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid{
+            border:5px solid pink;
+            display:grid;       /*150px, 두번째는 나머지 픽셀을 다 씀(1fr)*/
+            grid-template-columns: 150px 1fr;
+        }
+        div{
+            border:5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!--inline element가 필요한 경우 span, block일 경우 div-->
+    <div id="grid">
+    <div>NAVIGATION</div>
+    <div>ARTICLE</div>
+</body>
+</html>
