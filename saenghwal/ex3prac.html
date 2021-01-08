@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--리팩토링 : 코드 재정비(중복 제거)-->
+    <!--변수 선언(var target=document.querySelector('body')와 같이 가능)-->
+    <!-- this.value 를 통해 id값을 주지않아도 자기자신을 가져와 가져올수 있음-->
+    <input id="day_night" type="button" value="night" 
+    onclick="
+    if(document.querySelector('#day_night').value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#day_night').value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#day_night').value = 'night';
+    }
+    ">
+    <h1>1&lt;2</h1>
+    <script>
+        document.write(1<2);
+        document.write("<br>1");
+    </script>
+
+    <h2>test</h2>
+    <p>Lorem ipsum 
+    </p>
+
+    <input type="button" value="night" 
+    onclick="
+    if(this.value === 'night'){
+        var target = document.querySelector('body');
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+    ">
+</body>
+</html>
