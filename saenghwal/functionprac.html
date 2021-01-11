@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function nightdayhandler(self){
+        var target = document.querySelector('body');
+
+        if(self.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i+1;
+            }
+        }else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'green';
+                i = i+1;
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>hi</h1>
+    <a>I'm in love</a>
+    <a>with javascript</a>
+    <input type="button" value="night" 
+    onclick="
+    nightdayhandler(this);"
+</body>
+</html>
