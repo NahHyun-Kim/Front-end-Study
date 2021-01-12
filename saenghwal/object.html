@@ -24,5 +24,24 @@
         document.write("data scientist : " + coworkers["data scientist"] + "<br>");
 
     </script>
+
+    <h2>Iterate</h2>
+    <script>
+        <!--coworkers에 있는 key값을 모조리 출력하라.-->
+        for(var key in coworkers) {
+            document.write(key + ' : ' + coworkers[key] + '<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this) {
+            
+            document.write(key + ' : ' + coworkers[key] + '<br>');
+        }  
+        }
+        coworkers.showAll();
+    </script>
 </body>
 </html>
