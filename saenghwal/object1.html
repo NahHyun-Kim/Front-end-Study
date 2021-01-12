@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function LinkssetColor(color){
+    var alist = document.querySelectorAll('a');
+
+    var i = 0;
+    while(i < alist.length){
+    alist[i].style.color = color;
+    i = i+1;    
+    }
+    }
+
+    function BodySetColor(color){
+        document.querySelector('body').style.color = color;
+
+    }
+
+    function BodySetBackgroundColor(color){
+        document.querySelector('body').style.backgroundColor = color;
+    
+    }
+    function nightdayhandler(self){
+        var target = document.querySelector('body');
+
+        if(self.value === 'night'){
+            Body.SetColor('white');
+            Body.SetBackgroundColor('black');
+            self.value = 'day';
+
+            Links.setColor('powderblue');
+            
+        }else{
+            Body.SetColor('black');
+            Body.SetBackgroundColor('white');
+            self.value = 'night';
+
+            Link.ssetColor('green');
+            
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>hi</h1>
+    <a>I'm in love</a>
+    <a>with javascript</a>
+    <input type="button" value="night" 
+    onclick="
+    nightdayhandler(this);"
+</body>
+</html>
