@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Example</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            font-size: 32px;
+            /*100~900 사이, 100단위로 굵기 설정, 폰트마다 지원하는 굵기가 정해져 있음*/
+            /*font-weight:normal(=400), bold(=700) */
+            font-weight: 700;
+            
+            text-align: center;
+
+            /*line-through(가운데를 통과하는 듯한)*/
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <!--htmlcolorcodes.com에서 색상 찾기-->
+    <!--rgb(0,0,0)/ 색상명 / #값(hex)으로 설정 가능-->
+    <!--투명도 설정(hex값 뒤에 ff 불투명, 00 투명)-->
+    <h1>색상 변경</h1>
+
+    <p>텍스트의 다양한 스타일링</p>
+
+    <!--a 태그는 inline 속성이기 때문에 , block 속성인 div태그로 감싸준다.-->
+    <div>
+    <a href="#">link</a>
+    </div>
+</body>
+</html>

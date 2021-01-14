@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto&family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<style>
+    h1 {
+        /*font가 없을 경우를 대비해서 2번째 폰트를 넣음*/
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    h2 {
+        font-family: 'Song Myung', serif;
+    }
+
+    h3 {
+        font-family: 'Poor Story', cursive;
+    }
+
+</style>
+</head>
+<body>
+    <div class="sefif">
+        Times New Roma, 궁서체
+    </div>
+    <div class="sans-serif">
+        Arial, 굴림체
+    </div>
+    <div class="monospace">
+        Courier, Courier New
+    </div>
+    <div class="cursive">
+        Comic Sans MS, Monotyle Corsiva
+    </div>
+    <div class="Fantasy">
+        Impact, Haettenschweiler
+    </div>
+
+    <h1>Trying Out Different Fonts!</h1>
+    <h2>설치되지 않은 폰트에 대한 import(google)</h2>
+    <h3>또 다른 구글 폰트 적용하기</h3>
+
+    <!--다운받은 ttf 파일의 적용은 @font-face {
+        src: url("폰트 파일이 있는 경로 지정");
+        font family : "Jua";로 설정 후, 
+        설정하고자 하는 p태그에 {
+            font-family : "Jua";와 같이 설정한다.
+        }
+    }-->
+    <p>styles.css에 있는 폰트(다운받은 ttf 파일) 적용!</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+ .logo {
+        padding-top: 50px;
+    }
+    span {
+        margin-left: 40%;
+        margin-right: 50%;
+        border: 10px solid black;
+        padding: 5px;
+        width:165px;
+        height:58px;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .menu {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    }
+    .menu a {
+        font-family: "Helvetica";
+        color: rgb(88 , 89, 91);
+        margin-right: 20px;
+        text-decoration: none;
+        
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
