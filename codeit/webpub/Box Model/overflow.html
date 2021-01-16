@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        h1 { 
+            border: 5px solid red;
+        }
+    
+        .p1 {
+            border: 5px solid red;
+            /*적어도 500px*/
+            min-width: 500px;
+        }
+    
+        .p2 {
+            border: 5px solid red;
+            /*최대 크기는 200px을 넘어가지 않음. 이것을 넘어가는 넘침 현상은 overflow로 처리*/
+            max-height: 200px;
+            overflow: scroll;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Life is Beautiful</h1>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida mi non erat pellentesque tincidunt. Nam id arcu eget arcu pulvinar sollicitudin ut ac massa. Integer sodales sagittis justo. Phasellus dignissim sem non pharetra sodales. Fusce sed eros eget nisi semper scelerisque. Nulla facilisi. Nulla eget odio cursus, auctor massa sit amet, convallis elit. Aliquam in feugiat odio. Mauris tortor arcu, lobortis non gravida non, vulputate id nulla. Sed est elit, tincidunt nec odio vitae, lacinia ultrices nunc. Curabitur tincidunt metus id leo porttitor malesuada. Aliquam elementum placerat arcu ut rutrum. Vestibulum efficitur sagittis accumsan. Donec vehicula in urna nec pretium. Maecenas neque nulla, dictum a ante ac, molestie fermentum justo.</p>
+    
+        <!-- overflow: visible의 경우(삐져나와도 보여줌), hidden(자름), scroll(스크롤해서 볼 수 있음),
+            auto(scroll은 항상 스크롤을 보여주는데, auto는 내용물이 넘쳐날 때만 스크롤바를 보여줌)-->
+        <p class="p2">Morbi sodales, justo ut lacinia aliquam, turpis massa rhoncus augue, quis ullamcorper dui erat vitae dolor. Integer maximus lacus mauris, sit amet vulputate erat tincidunt luctus. Nulla suscipit rutrum purus sed porttitor. Maecenas congue arcu in mauris lobortis, et porttitor dolor scelerisque. Sed ullamcorper sapien justo, eu consectetur dolor viverra ut. Sed augue leo, accumsan at risus eu, commodo congue lectus. Sed pellentesque tristique purus, vel vulputate est pulvinar sit amet. Donec fermentum mauris ex, quis pulvinar nisl rhoncus sed. Nullam sed hendrerit est. Mauris eget est congue, bibendum est quis, pulvinar ligula.</p>
+    
+    </body>
+    </html>

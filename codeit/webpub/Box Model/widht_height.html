@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model</title>
+    <title>width & height</title>
 <style>
-    h1 {
+    h1 { 
         border: 5px solid red;
-        width: 500px;
-        height: 300px;
-        text-align: center;
-        margin: 0 auto;
-
     }
+
     .p1 {
-        border: 5px solid powderblue;
-        margin: 50px 20px;
+        border: 5px solid red;
+        /*적어도 500px*/
+        min-width: 500px;
     }
 
     .p2 {
-        border: 5px solid powderblue;
-        padding: 50px 0px;
+        border: 5px solid red;
+        /*최대 크기는 200px을 넘어가지 않음. 이것을 넘어가는 넘침 현상은 overflow로 처리*/
+        max-height: 200px;
     }
 </style>
 </head>

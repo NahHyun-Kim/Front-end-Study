@@ -1,0 +1,13 @@
+.info {
+    height: 220px;
+    overflow: auto;
+    padding: 15px;
+    margin: 0 auto;
+    border: 3px solid #b72920;
+    text-align: center;
+}
+
+img {
+     display: block;
+     margin: 0 auto;
+}
