@@ -1,0 +1,47 @@
+* {
+    /* 모든 요소 boxsizing 크기 지정 */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1BBC9B;
+
+}
+
+.login-form {
+    text-align: center;
+    margin: auto auto;
+    background-color: #eeeff1;
+    width: 230px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.text-field {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+
+.submit-btn {
+    background-color: #1BBC9B;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 176px;
+    height: 36px;
+}
+
+.link {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.link a {
+    display: inline;
+    color: #9B9B9B;
+    font-size: 10px;
+}

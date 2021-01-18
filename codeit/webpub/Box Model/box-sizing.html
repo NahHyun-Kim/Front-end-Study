@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title>
+<style>
+
+    /* 모든 요소에 box-sizing 요소 추가 */
+    * {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        width: 300px;
+        height: 200px;
+        padding: 35px;
+        border: 5px solid red;
+
+        /* border-box를 쓰면 쓴 크기에 맞게 */
+        box-sizing: border-box;
+
+        /* default값은 content-box로, padding과 border를 더한 사이즈로 계산됨.*/
+    }
+</style>
+</head>
+<body>
+    <h1>Life is Beautiful</h1>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-image</title>
+<style>
+    .div1 {
+        height: 500px;
+        border: 5px solid green;
+        background-image: url("../IMG/grand_hotel.jpg");
+        
+        /* repeat: 반복적으로 채워짐 no-repeat: 반복시키지 않음*/
+        /* repeat-x; (가로 방향으로만 반복), repeat-y(세로 방향으로만 반복) 
+           space (남는 공간은 이미지 간의 여백으로), round (남는 공간은 이미지 확대를 통해 배분) */
+        background-repeat: no-repeat;
+
+        /* cover: 배경을 꽉 채우면서도 비율을 유지 */
+        background-size: cover;
+
+        /* 페이지 크기를 조정할 시, 오른쪽과 밑부분을 기준으로 남기고 다른 부분을 자름
+        center center일 경우에도 위아래 양 옆이 짤려 가운데 중심으로 나오게 됨 */
+        background-position: right bottom;
+   }
+</style>
+</head>
+<body>
+    <div class="div1">
+
+    </div>
+
+    <p>
+    <h3>background-size</h3>
+원래 이미지 사이즈대로 출력
+background-size: auto;
+<br>
+화면을 꽉 채우면서, 사진 비율 유지
+background-size: cover;
+<br>
+가로, 세로 중에 먼저 채워지는 쪽에 맞춰 출력
+background-size: contain;
+<br>
+픽셀값 지정 (가로: 30px, 세로: 50px로 설정)
+background-size: 30px 50px;
+<br>
+퍼센트값 지정 (50% 70% - 부모 요소 width, height 기준 설정)
+</p>
+</body>
+</html>

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>border</title>
     <style>
+        body {
+            /* 페이지 전체 배경 적용(body태그) */
+            background-color: lightyellow;
+
+            /* 배경색을 투명하게 하고 싶은 경우 transparent 값 설정,
+            설정 안할 시 기본값으로 적용 */
+
+        }
         h1 { 
             border: 5px solid red;
         }
@@ -46,6 +54,13 @@
             border-bottom-left-radius: 20px; /*왼쪽 아래*/
 
         }
+
+        .shadow1 {
+            background-color: gray;
+            display: inline;
+            /*가로, 세로, 블러(흐림 정도), 그림자의 퍼짐 크기, 지정한 그림자 색상*/
+            box-shadow: 40px 10px 10px 20px 4d9fff;
+        }
     </style>
     </head>
     <body>
@@ -78,6 +93,9 @@
         <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida mi non erat pellentesque tincidunt. Nam id arcu eget arcu pulvinar sollicitudin ut ac massa. Integer sodales sagittis justo. Phasellus dignissim sem non pharetra sodales. Fusce sed eros eget nisi semper scelerisque. Nulla facilisi. Nulla eget odio cursus, auctor massa sit amet, convallis elit. Aliquam in feugiat odio. Mauris tortor arcu, lobortis non gravida non, vulputate id nulla. Sed est elit, tincidunt nec odio vitae, lacinia ultrices nunc. Curabitur tincidunt metus id leo porttitor malesuada. Aliquam elementum placerat arcu ut rutrum. Vestibulum efficitur sagittis accumsan. Donec vehicula in urna nec pretium. Maecenas neque nulla, dictum a ante ac, molestie fermentum justo.</p>
     
         <p class="p2">Morbi sodales, justo ut lacinia aliquam, turpis massa rhoncus augue, quis ullamcorper dui erat vitae dolor. Integer maximus lacus mauris, sit amet vulputate erat tincidunt luctus. Nulla suscipit rutrum purus sed porttitor. Maecenas congue arcu in mauris lobortis, et porttitor dolor scelerisque. Sed ullamcorper sapien justo, eu consectetur dolor viverra ut. Sed augue leo, accumsan at risus eu, commodo congue lectus. Sed pellentesque tristique purus, vel vulputate est pulvinar sit amet. Donec fermentum mauris ex, quis pulvinar nisl rhoncus sed. Nullam sed hendrerit est. Mauris eget est congue, bibendum est quis, pulvinar ligula.</p>
-    
+
+        <div class="shadow1">
+            Hello World!
+        </div>
     </body>
     </html>
