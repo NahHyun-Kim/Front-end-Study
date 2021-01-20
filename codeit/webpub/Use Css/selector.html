@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+<style>
+    .div1 > i {
+        color: red;
+    }
+
+    .nthchild p:nth-child(3){
+        color: blue;
+    }
+
+    .nthchild p:first-child {
+        color: red;
+    }
+
+    .hover h2 {
+        color: powderblue;
+    }
+
+    .hover h2:hover {
+        color: greenyellow;
+    }
+</style>
+</head>
+<body>
+
+        <h1>h1, h2 태그..</h1>
+        <h2>클래스/아이디(., #)</h2>
+        <h2>자식 (.클래스명 i)</h2>
+
+        <div class="div1">
+            <p>직속 자식(.div1 > i)와 같이 기재하면 <br>
+            div 바로 밑의 i에만 해당하는 스타일을 적용한다 (p태그 안의 inside2 는 적용하지 않음)</p>
+            
+            <i>Inside 1</i>
+            <p>Blah Blah <i>Inside 2</i></p>
+            <i>Inside 3</i>
+          </div>
+
+          <div class="doubleselector">
+              <p>.two, .four {} 와 같이 동시에 태그를 선택하여 스타일을 적용한다.</p>
+          </div>
+
+          <div class="twocondition">
+              <p>.outside.one{} 과 같이 outside와 one을 둘다 가지는 조건의 태그를 선택</p>
+          </div>
+
+          <div class="nthchild">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>.nthchild p:nth-child(n) {} : n번째 p태그에만 속성 적용 <br>
+            .nthchild p:first-child {} : .nthchild의 자식인 p 태그 중 첫 번째에만 속성 적용
+            <br> div1 클래스 밑의 모든 태그에 적용하고 싶다면 .div1 > * 로 적용
+            </p>
+          </div>
+
+          <div class="hover">
+              <p>마우스 오버(hover) : 마우스를 갖다댔을때 스타일 속성이 바뀌도록 설정 <br>
+            h1 {} 스타일 지정 후, h1:hover {} 를 통해 지정하면 마우스를 갖다댈 시 hover 에 지정된 속성으로 스타일 적용</p>
+          <h2>hover! mouse on me!</h2>
+        </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* 원본 CSS 코드 */
+
+h2 {
+    padding: 20px;
+  }
+  
+  .box:nth-child(2n+1) h2 {
+    font-size: 30px;
+    padding: 20px;
+    background: #FA987D;
+  }
+  
+  .box:nth-child(2n) h2 {
+      font-size: 30px;
+      padding: 20px;
+      background: #72CCA7;
+  }
+
+  /* 또는 1,2,3,4, 번째 홀수 div는 divone으로, 짝수 div는 divtwo로 해서 설정해도 된다. */

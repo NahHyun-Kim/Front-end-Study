@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS의 다양한 단위</title>
+<style>
+    @font-face {
+        font-family: "Jua";
+        src: url("../fonts/BMJUA_ttf.ttf");
+    }
+
+    html {
+        font-size: 20px;
+        font-family: "Jua";
+        text-align: center;
+    }
+    .px {
+        display: inline-block;
+        padding-top: 20px;
+        background-color: powderblue;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .percent {
+        width: 200px;
+        background-color: powderblue;
+    } 
+
+    .text {
+        padding-left: 30%; /* 상위 요소의 width * 0.3 = 60px */
+    }
+</style>
+</head>
+<body>
+    <div class="px">
+        px는 절대적인 값(다른 요소에 영향을 받지 않음)</h2>
+    </div>
+
+    <div class="rem">
+        rem은 상대적인 값(오직 html 태그의 font-size에만 영향을 받음. 2rem = html font-size의 2배 크기)
+    </div>
+
+    <div class="em">
+        em은 상대적인 값인것은 마찬가지나 ,자기 자신의 font-size를 기준으로 한다. 
+    </div>
+
+    <div class="percent">
+        % 역시 상대적인 값으로, 상위 요소의 font-sisze에 180%라면 1.8배를 곱한다.
+        <p class="text">CodeIt! (margin, padding : width의 비율로 조정) </p>
+    </div>
+
+
+</body>
+</html>

@@ -28,11 +28,18 @@ img {
     margin-bottom: 50px;
     width: 300px;
     border-radius: 10px;
+    /* 사진의 네모부분 border-radius가 적용되지 않는 부분을 숨김 */
+    overflow: hidden;
 }
 
 .explanation {
     background-color: white;
 }
+
+.photobox .info {
+    padding: 20px;
+}
+
 h1 {
     font-family: "Jua";
     margin-top: 75px;
@@ -58,11 +65,11 @@ h4 {
     font-size: 16px;
     margin: 0px 20px;
     color: #58595B;
+    text-align: left;
 }
 
 h5 {
     font-family: "Jua";
     font-size: 16px;
-    padding-bottom: 20px;
     color: #0000EE;
 }
