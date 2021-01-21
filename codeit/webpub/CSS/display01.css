@@ -1,0 +1,26 @@
+@font-face {
+    src: url("../fonts/BMJUA_ttf.ttf");
+    font-family: "Jua";
+}
+
+* {
+    box-sizing: border-box;
+}
+p {
+    font-size: 32px;
+    font-family: "Jua";
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+
+}
+
+/* 마지막 자신을 빼고 다른 태그에 적용 (a:not(:last-child).. */
+.container a:not(:last-child) {
+    margin-right: 20px;
+}
+}

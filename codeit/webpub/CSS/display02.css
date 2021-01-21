@@ -1,0 +1,79 @@
+.container {
+    background-color: orange;
+}
+
+.alex {
+    background-color: pink;
+    font-size: 64px;
+    vertical-align: middle;
+
+}
+
+.ben {
+    background-color: green;
+    font-size: 15px;
+    /* 부모태그의 가운데와 맞춰짐 */
+    vertical-align: middle;
+
+}
+
+.chris {
+    background-color: yellow;
+    font-size: 48px;
+    vertical-align: middle;
+}
+
+.container2 {
+    background-color: gray;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+}
+
+.helper {
+    display: inline-block;
+    /* height:100% 설정 시 부모 태그의 height 가 설정되어 있어야 한다.*/
+    height: 100%;
+    vertical-align: middle;
+
+    width: 10px;
+    background-color: black;
+}
+
+.helper2 {
+    display:inline-block;
+    height:100%;
+    vertical-align: middle;
+
+}
+.info {
+    background-color: powderblue;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info2 {
+    background-color: powderblue;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+
+    margin-left: -7px;
+}
+
+.container3 {
+    background-color: gray;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    /* 부모 클래스에 height와 동일한 line-height을 줌. */
+    line-height: 400px;
+}
+.info3 {
+    background-color: powderblue;
+    display: inline-block;
+    vertical-align: middle;
+    /* 자식에게 상속되기 때문에 ,normal 을 꼭 써야 함*/
+    line-height: normal;
+
+}

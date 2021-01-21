@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical-align</title>
+<link rel="stylesheet" href="../CSS/display02.css">
+</head>
+<body>
+    <div class="container">
+        baseline
+        <!--vertical-align을 따로 설정하지 않으면 부모 태그의 baseline에 맞춰진다.-->
+        <span class="alex">alex</span>
+        <span class="ben">ben</span>
+        <span class="chris">chris</span>
+
+    </div>
+    <p>baseline은 vertical-align의 조건들을 충족시키면서 줄의 높이를 최소화시키는 곳에 위치한다.</p>
+
+    <div class="container2">
+        x
+        <div class="helper"></div>
+        <div class="info">
+            <h1>hello!</h1>
+            <p>My name is young.</p>
+            <p>vertical-align: middle(x)</p>
+        </div>
+    </div>
+    <br>
+
+    <div class="container2">
+        <div class="helper2"></div>
+         <div class="info2">
+            <h1>hello!</h1>
+            <p>My name is young.</p>
+            <p>height: 100%, v-m</p>
+        </div>
+    </div>
+<br>
+    <div class="container3">
+        <div class="helper2"></div>
+         <div class="info3">
+            <h1>hello!</h1>
+            <p>My name is young.</p>
+            <p>line-height: normal; (자식에게 상속)</p>
+        </div>
+    </div>
+</body>
+</html>
