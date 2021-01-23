@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+<style>
+    .red {
+        background-color: red;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+    }
+
+    .green {
+        background-color: green;
+        width: 300px;
+        height: 300px;
+        /* position: relative;
+        top: 40px;
+        left: 90px; */
+    }
+
+    /* 가장 상위 positioning이 된 red div 의 기준에서 공간을 줌*/
+    .blue {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    }
+</style>
+</head>
+<body>
+    <div class="red">
+        <div class="green">
+            <div class="blue">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
