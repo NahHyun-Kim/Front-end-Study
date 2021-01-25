@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* 전체 */
+  
+  .grid {
+      height: 200px;
+      float: left;
+  }
+
+  /* 개별 */
+  
+  #red {
+      background-color: #FF0000;
+      width: 33%;
+  }
+  
+  #orange {
+      background-color: #FFA500;
+      width: 33%;
+  }
+  
+  #yellow {
+      background-color: #FFFF00;
+      width: 34%;
+  }
+  
+  #green {
+      background-color: #008000;
+      width: 33%;
+  }
+  
+  #blue {
+      background-color: #0000FF;
+      width: 67%;
+  }
+  
+  #indigo {
+      background-color: #4B0082;
+      width: 100%;
+  }
+  
+  #purple {
+      background-color: #B00080;
+      width: 67%;
+  }

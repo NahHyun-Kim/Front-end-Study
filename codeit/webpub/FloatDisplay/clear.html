@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>클리어 연습</title>
+    <meta charset="utf-8" />
+</head>
+<style>
+    div {
+        margin: 0px;
+        
+    }
+
+    .col {
+        height: 200px;
+        float: right;
+    }
+
+    .col-1 {
+        width: 200px;
+    }
+
+    .col-2 {
+        width: 400px;
+    }
+
+    .col-3 {
+        width: 600px;
+    }
+
+    #div2 {
+        /* 왼쪽에 떠있는 요소가 없도록 새로운 줄로 감 */
+        clear: left;
+    }
+ 
+    .grid {
+        border: 2px solid black;
+    }
+
+    .clearfix {
+        clear: right;
+    }
+</style>
+
+<body>
+    <!--grid 형식의 float + clear fix 지정-->
+    <div class="grid">
+        <div id="div1" class="col col-1" style="background-color: blue;"></div>
+        <div id="div2" class="col col-1" style="background-color: green;"></div>
+        <div id="div3" class="col col-1" style="background-color: yellow;"></div>
+        <div id="div4" class="col col-1" style="background-color: orange"></div>
+        <div id="div5" class="col col-2" style="background-color: purple"></div>
+        <div id="div6" class="col col-3" style="background-color: pink;"></div>
+        <div id="div7" class="col col-2" style="background-color: gray;"></div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- float만 설정할 경우 위의 공간이 비어있기 때문에 컬러 공간을 p가 차지, 텍스트는 들어올수 없어 남은 공간에 배치된다.-->
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p>
+</body>
+
+</html>
