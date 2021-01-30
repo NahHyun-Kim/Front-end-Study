@@ -4,6 +4,7 @@ img {
     margin: 0 auto;
 }
 
+//몽숭이 포지션 relative 설정 (bottom으로부터 100px, left로 부터 200px 떨어지게 설정)
 .mongsoong {
     position: relative;
     bottom: 100px;
