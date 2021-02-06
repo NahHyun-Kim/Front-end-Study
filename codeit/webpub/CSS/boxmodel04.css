@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url("../fonts/BMJUA_ttf.ttf");
+    font-family: "Jua";
+}
+
+body {
+    background-color: #F0E8D9;
+    width: 100%;
+}
+
+
+.food-container {
+    width: 660px;
+    margin: 0 auto;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+.textarea {
+    text-align: center;
+    
+}
+
+.clearfix {
+    clear: left;
+}
+
+.photobox {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 300px;
+    border-radius: 10px;
+    /* 사진의 네모부분 border-radius가 적용되지 않는 부분을 숨김 */
+    overflow: hidden;
+
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.explanation {
+    background-color: white;
+}
+
+.photobox .info {
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Jua";
+    margin-top: 75px;
+
+}
+
+h2 {
+    font-family: "Jua";
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-family: "Jua";
+    font-size: 32px;
+    margin-top: 20px 0px;
+    color: #58595B;
+}
+
+h4 {
+    font-family: "Jua";
+    font-size: 16px;
+    margin: 0px 20px;
+    color: #58595B;
+    text-align: left;
+}
+
+h5 {
+    font-family: "Jua";
+    font-size: 16px;
+    color: #0000EE;
+}

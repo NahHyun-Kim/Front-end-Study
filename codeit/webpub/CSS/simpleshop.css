@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 992px;
+    font-family: "Helvetica";
+  }
+  
+  #helper {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+  }
+ 
+  #logo {
+      vertical-align: middle;
+  }
+
+  #navbar {
+      height: 60px;
+      padding-right: 30px;
+      padding-left: 30px;
+  }
+  
+  #menu {
+      float: right;
+      list-style: none;
+  }
+
+  #menu li {
+      float: left;
+  }
+
+  #menu li a {
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+#products img {
+    width: 225px;
+    height: 225px;
+}
+
+.photobox {
+    width: 225px;
+    height: 260px;
+    float: left;
+
+    margin-bottom: 80px;
+    margin-left: 20px;
+
+    text-align: center;
+}
+#products h1 {
+    margin-top:60px;
+    margin-bottom: 60px;
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    color: #545454;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.product-list {
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info a {
+    text-decoration: none;
+    color: #545454;
+}
+
+#clearfix {
+    clear: right;
+}
+
+.clearfix {
+    clear: both;
+}
+#footer .logos {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+#footer .logos a img {
+    margin-right: 20px;
+}
+  

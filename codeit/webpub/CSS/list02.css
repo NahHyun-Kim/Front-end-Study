@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  #navbar {
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
+    height: 60px;
+  }
+
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  #menu {
+      float: right;
+      list-style: none;
+  }
+
+  #menu li {
+      float: left;
+      height: 100%;
+      margin-right: 10px;
+      margin-left: 10px;
+  }
+
+  #menu li a {
+      color: black;
+      text-decoration: none;
+      display: block;
+  }
+
+  #menu li a:hover {
+    background-color: #eeeeee;
+    text-decoration: none;
+}
+
+  #logo {
+    display: inline-block;
+    font-family: serif;
+    vertical-align: middle;
+    
+  }
+  
+  .hero-header {
+    background-image: url("../IMG/hero_image\ \(1\).jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 670px;
+    text-align: center;
+    line-height: 670px;
+  }
+  
+  .hero-header .info {
+    display: inline-block;
+    /* 자식인 .info의 line-height도 상속받으므로 , normal을 적용해 상속받지 않게 함.*/
+    line-height: normal;
+    vertical-align: middle;
+
+  }
+  
+  .hero-header .info h1 {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 13px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .hero-header .info h2 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 60px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .hero-header .info a {
+    font-size: 14px;
+    background-color: white;
+    color: #464273;
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  
+  
