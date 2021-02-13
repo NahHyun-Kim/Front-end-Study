@@ -7,6 +7,23 @@ const form = document.querySelector(".js-form"),
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
+function saveName(text){
+    localStorage.setItem(USER_LS, text);
+}
+
+function handleSubmit(event) {
+    //event는 기본적으로 페이지를 새로고침해주는데, 이를 방지(enter를 눌러도 값이 사라지지 않음)
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGreeting(currentValue);
+    saveName(currentValue);
+}   
+
+function askForName() {
+    form.classList.add(SHOWING_CN);
+    form.addEventListener("submit", handleSubmit);
+}
+
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
@@ -17,7 +34,7 @@ function loadName() {
 
     const currentUser = localStorage.getItem(USER_LS);
     if(currentUser === null){
-        //she is not
+        askForName();
     }else {
         //she is
         paintGreeting(currentUser);
