@@ -12,4 +12,6 @@ function logParticipant(userName) {
   console.log(`${userName}(이)가 대화에 참여했습니다.`);
 }
 
+// 인자(argument)값을 parameter(함수명 옆)으로 넘겨
+// 문자열 벡터에 있는 ${name}값에 전달한다.
 logParticipant('김나현');

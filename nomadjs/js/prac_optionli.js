@@ -15,10 +15,10 @@ function ask() {
 function loadName() {
   const COUNTRY = localStorage.getItem(country);
 
+  //챌린지 (나라명 입력받아 local storage 에 띄우기)
   if (COUNTRY === null) {
     ask();
   }
 }
-
 
   loadName();
