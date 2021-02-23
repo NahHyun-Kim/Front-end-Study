@@ -68,3 +68,4 @@ myFunction();
 
 
 //상수-const로 표현, const pi 로만 선언해도 오류가 뜨지 않음
+//상수로 표현 시 const MY_NUMBER(_을 통해 구별)
