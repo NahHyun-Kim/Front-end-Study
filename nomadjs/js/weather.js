@@ -25,6 +25,7 @@ function handleGeoSuccess(position){
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const coordsObj = {
+    
     //이름이 같을 경우는 latitude: latitude로 작성하지 않음
     latitude,
     longitude
