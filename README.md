@@ -1,1 +1,1 @@
-# NH Dev's Visual Studio Code(front-end)
+# Visual Studio Code Study(front-end : html/css/javascript)
