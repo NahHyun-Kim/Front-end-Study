@@ -10,11 +10,15 @@
 
 <body>
   <h1>my site!</h1>
+  <input id="bookName" value="" type="text">
+  <button id="search">검색하기</button>
   <p></p>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script>
+    $(document).ready(function () {
+            $("#search").click(function () {
     //요청에 대한 정보(전송방식, 전송 주소, 보낼 데이터)
     $.ajax({
       method: "GET",
@@ -28,7 +32,11 @@
         console.log(msg.documents[0].thumbnail);
         $( "p" ).append( "<strong>" + msg.documents[0].title + "</strong>" );
         $( "p" ).append( "<img src='" + msg.documents[0].thumbnail + "'/>" );
-      });</script>
+      });
+    });
+  });
+      
+</script>
 </body>
 
 </html>
