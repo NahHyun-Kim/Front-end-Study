@@ -49,6 +49,7 @@ body {
   font-size: 12px;
 }
 
+/* :active -> 사용자가 활성화한 요소(마우스 누르기~떼기까지) */
 .controls__btns button:active{
   transform: scale(0.98);
 }
