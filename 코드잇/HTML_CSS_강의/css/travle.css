@@ -1,15 +1,16 @@
  .logo {
         padding-top: 50px;
+        align-items: center;
     }
-    span {
-        margin-left: 40%;
-        margin-right: 50%;
+    #travle {
         border: 10px solid black;
         padding: 5px;
-        width:165px;
+        width:20%;
         height:58px;
         font-weight: 700;
         font-size: 32px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .menu {
@@ -29,8 +30,20 @@
         
     }
 
+    #home {
+        font-weight: bold;
+    }
+    
     img {
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    #photo {
+        width: 90%;
+    }
+
+    .menu a:hover {
+        cursor: pointer;
     }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 사이트</title>
+<link rel="stylesheet" href="../css/travle.css">
+</head>
+<body>
+    <div class="logo">
+    <div id="travle">Travle</div>
+    </div>
+    <div class="menu">
+        <a id="home" onclick="clickHome();">Home</a>
+        <a id="seoul" onclick="clickSeoul();">Seoul</a>
+        <a id="tokyo" onclick="clickTokyo();">Tokyo</a>
+        <a id="paris" onclick="clickParis();">Paris</a>
+    </div>
+
+        <img id="photo" src="https://media.vlpt.us/post-images/chltndid724/9b356620-f234-11e9-b908-a36ade2c465a/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%901.png"
+        width="90%">
+
+<!-- 함수로 분리하여 처리 -->
+<script type="text/javascript">
+    var photo = document.getElementById('photo');
+
+    function clickHome() {
+        photo.src = 'https://media.vlpt.us/post-images/chltndid724/9b356620-f234-11e9-b908-a36ade2c465a/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%901.png';
+
+    }
+
+    function clickSeoul() {
+        photo.src = 'https://k-mice.visitkorea.or.kr/convention_kor/images/infor/seoul_img.jpg';
+    }
+
+    function clickTokyo() {
+        photo.src = 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/7462/40659_large_1525259846.jpg?1525259846';
+    }
+
+    function clickParis() {
+        photo.src = 'https://mblogthumb-phinf.pstatic.net/MjAxODA2MDJfMjE4/MDAxNTI3OTI1NDQwOTUx._Gsdj9ZinJe4pgnjgB-vB97k8cmMMLnvaNeVul078sog.bI9QQd4W0pAG7xIhza-IAu2ylDU7t8LpjQtFiVNxse0g.JPEG.tourpuzzle/shutterstock_519031333.jpg?type=w800';
+    }
+</script>
+</body>
+</html>
