@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+</head>
+<body>
+  <div class="login-form">
+    <form>
+      <input type="text" name="email" id="email-input" class="text-field" placeholder="아이디"><br>
+      <input type="password" name="password" id="password-input" class="text-field" placeholder="비밀번호"><br>
+      <input type="submit" value="로그인" id="submit-btn">
+    </form>
+
+    <div class="links">
+      <a href="#">비밀번호를 잊어버리셨나요?</a>
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+
+    // jquery 요소와 이벤트를 한번에 여러가지 바인딩 가능(요소 셀렉트 시 ,로 구분, 함수는 띄어쓰기)
+    $('#email-input, #password-input').on('input mouseenter', checkInput);
+
+    function checkInput() {
+      console.log('input');
+      // .val() 메소드로 입력값을 받아옴
+      var email = $('#email-input').val();
+      var password = $('#password-input').val();
+
+      if (email === '' || password === '') {
+        // 비활성화
+        $('#submit-btn').css('background-color', '#9B9B9B');
+      } else {
+        // 활성화
+        $('#submit-btn').css('background-color', '#1BBC9B')
+      }
+    }
+
+  </script>
+</body>
+</html>

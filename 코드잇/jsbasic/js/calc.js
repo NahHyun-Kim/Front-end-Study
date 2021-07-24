@@ -1,7 +1,8 @@
 var formulaInput = document.getElementById("formula-input");
-var calHistDiv = document.getElementById("calc-history");
+var calcHistDiv = document.getElementById("calc-history");
 
 formulaInput.addEventListener("keyup", function(e) {
+  console.log("keyup");
   // 키보드가 enter를 누를 때, 계산 진행
   if (e.code === "Enter")
     calculate();
@@ -16,7 +17,7 @@ function calculate() {
   var formulaValid = formulaRegex.test(fm); 
   var resultText = "오류!";
   if (formulaValid) {
-    // 형식에 맞다면, 계싼 진행
+    // 형식에 맞다면, 계산 진행
     var answer;
     eval('answer=' + fm);
     resultText = fm + " = ";

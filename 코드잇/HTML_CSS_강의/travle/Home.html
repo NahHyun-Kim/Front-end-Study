@@ -5,41 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행 사이트</title>
 <link rel="stylesheet" href="../css/travle.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="logo">
     <div id="travle">Travle</div>
     </div>
     <div class="menu">
-        <a id="home" onclick="clickHome();">Home</a>
-        <a id="seoul" onclick="clickSeoul();">Seoul</a>
-        <a id="tokyo" onclick="clickTokyo();">Tokyo</a>
-        <a id="paris" onclick="clickParis();">Paris</a>
+        <a class="anchors" onclick="clickPhoto(0);">Home</a>
+        <a class="anchors" onclick="clickPhoto(1);">Seoul</a>
+        <a class="anchors" onclick="clickPhoto(2);">Tokyo</a>
+        <a class="anchors" onclick="clickPhoto(3);">Paris</a>
     </div>
 
         <img id="photo" src="https://media.vlpt.us/post-images/chltndid724/9b356620-f234-11e9-b908-a36ade2c465a/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%901.png"
-        width="90%">
+        width="90%" onmouseenter="mouseEnterPhoto();">
 
 <!-- 함수로 분리하여 처리 -->
 <script type="text/javascript">
     var photo = document.getElementById('photo');
+    var anchors = document.getElementsByClassName('anchors');
 
-    function clickHome() {
-        photo.src = 'https://media.vlpt.us/post-images/chltndid724/9b356620-f234-11e9-b908-a36ade2c465a/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%901.png';
+    // 클릭한 메뉴 Bold 처리
+    function getBold(index) {
+        console.log(typeof index + index);
 
+        for (var i=0; i<anchors.length; i++) {
+            if (i==index) {
+                console.log(`same! toBold[${i}]`); 
+                // anchors[i].style.fontWeight = 'bold';
+                // jquery 필터셀렉터 :first, :last, :even, :odd, :eq(index) 등으로 사용
+                $(`.anchors:eq(${i})`).css('font-weight', 'bold')
+            } else{
+                anchors[i].style.fontWeight = 'normal';
+            }
+
+        }
     }
 
-    function clickSeoul() {
-        photo.src = 'https://k-mice.visitkorea.or.kr/convention_kor/images/infor/seoul_img.jpg';
+    function clickPhoto(index) {
+        // Home 클릭
+        if (index == 0) {
+            // jquery : $('id or class or 변수').attr('src', 바꿀 내용) -> attr.src(속성이 src인 것을 바꿈)
+            $('#photo').attr('src', 'https://media.vlpt.us/post-images/chltndid724/9b356620-f234-11e9-b908-a36ade2c465a/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%901.png');
+            getBold(index);
+        } 
+        // Seoul 클릭
+        else if (index == 1) {
+            photo.src = 'https://k-mice.visitkorea.or.kr/convention_kor/images/infor/seoul_img.jpg';
+            getBold(index);
+        }
+        // Tokyo 클릭
+        else if (index == 2) { 
+            photo.src = 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/7462/40659_large_1525259846.jpg?1525259846';
+            getBold(index);
+        }
+        // Paris 클릭
+        else if (index == 3) {
+            photo.src = 'https://mblogthumb-phinf.pstatic.net/MjAxODA2MDJfMjE4/MDAxNTI3OTI1NDQwOTUx._Gsdj9ZinJe4pgnjgB-vB97k8cmMMLnvaNeVul078sog.bI9QQd4W0pAG7xIhza-IAu2ylDU7t8LpjQtFiVNxse0g.JPEG.tourpuzzle/shutterstock_519031333.jpg?type=w800';
+            getBold(index);
+        }
     }
 
-    function clickTokyo() {
-        photo.src = 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/7462/40659_large_1525259846.jpg?1525259846';
+    // jquery 사용, 함수 호출시 함수명만 씀 , 괄호 생략
+    // Vanilla JavaScript : document.getElementById('photo').addEventListner('mouseleave', mouseLeavePhoto);
+    $('#photo').on('mouseleave', mouseLeavePhoto);
+
+    // keyboard 이벤트
+    $(document).on('keydown', processKeyEvent);
+
+    // onmouseEnter 마우스가 공간에 들어올때
+    // onmouseLeave 마우스가 공간에서 나갈때
+    function mouseEnterPhoto() {
+        $('#photo').css('box-shadow', '5px 10px gray');
     }
 
-    function clickParis() {
-        photo.src = 'https://mblogthumb-phinf.pstatic.net/MjAxODA2MDJfMjE4/MDAxNTI3OTI1NDQwOTUx._Gsdj9ZinJe4pgnjgB-vB97k8cmMMLnvaNeVul078sog.bI9QQd4W0pAG7xIhza-IAu2ylDU7t8LpjQtFiVNxse0g.JPEG.tourpuzzle/shutterstock_519031333.jpg?type=w800';
+    function mouseLeavePhoto() {
+        $('#photo').css('box-shadow', 'none');
     }
+
+    // event 객체의 'key'값(인덱스는 0부터 시작하므로 -1 로 전달)
+    function processKeyEvent(event) {
+        clickPhoto(event['key'] -1);
+    }
+
+
 </script>
 </body>
 </html>
