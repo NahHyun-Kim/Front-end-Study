@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consulting Market</title>
+    <meta charset="utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/emailStyle.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero-header">
+      <div class="navbar">
+        <a href="#" id="logo">
+          <img src="image/logo.png" width="230">
+        </a>
+
+        <ul class="menu menu-left">
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+
+        <ul class="menu menu-right">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="left">
+          <h2>더 많은 <b>정보와 이벤트</b> 등을<br> 받아보고 싶으면 <b>이메일을 입력해주세요!</b></h2>
+
+          <input id="email-input" type="email" placeholder="이메일">
+          <input id="submit-btn" type="submit" value="Send">
+        </div>
+
+        <img id="main-img" src="image/desk.png" width="400">
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      var input = document.getElementById('email-input');
+      $(input).on('input', emailChk);
+
+      function emailChk() {
+        $('#submit-btn').css('background-color', '#4D79C2');
+
+        var value = $(input).val();
+        var hasAt = value.indexOf('@');
+        var hasDot = (value.substring(hasAt)).indexOf('.');
+
+        if (hasAt != -1 && hasDot != -1) {
+          $('#submit-btn').css('background-color', '#4D79C2')
+        } else {
+          $('#submit-btn').css('background-color', '#9E9E9E');
+        }
+      }
+    </script>
+  </body>
+</html>
