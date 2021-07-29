@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Couple Story</title>
+    <meta charset="utf-8" />
+    <link href="css/ddayStyle.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <img id="logo" src="image/logo2.png" width="157">
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <!-- 만난지 며칠? -->
+        <h2>만난지 <span id="day-count">00</span>일째</h2>
+
+        <div class="img-row">
+          <img src="image/female.png" width="148">
+          <img src="image/dot.png" width="8">
+          <img src="image/dot.png" width="8">
+          <img src="image/heart.png" width="16">
+          <img src="image/dot.png" width="8">
+          <img src="image/dot.png" width="8">
+          <img src="image/male.png" width="148">
+        </div>
+
+        <!-- 만나기 시작한 날짜 -->
+        <div class="date-row">
+          <label for="start">시작일</label>
+          <input type="date" name="start" id="start">
+        </div>
+
+        <!-- 며칠됐는지 계산하기! -->
+        <button id="calculate">결과 보기</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      // 날짜 계산하는 함수 호출하기
+      $('#calculate').on('click', calDate);
+
+      function calDate() {
+        // 현재 날짜와 기념일 받아오기
+        var now = new Date();
+        var startDate = new Date($('#start').val());
+
+        // 날짜 차이 계산하기
+        // getTime()은 ms 단위로 나오므로, 날짜 단위로 변환
+        var betweenDays = (now.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
+
+        // 같은 날짜가 1일째로 표시되므로, 계산한 날짜 + 1을 결과로 표시
+        // text 값을 dday+ 값으로 표시
+        $('#day-count').text(Math.floor(betweenDays) + 1);
+
+        if ($('#start').val() == '') {
+          alert('날짜를 입력해 주세요!');
+        }
+      }
+
+    </script>
+  </body>
+</html>
