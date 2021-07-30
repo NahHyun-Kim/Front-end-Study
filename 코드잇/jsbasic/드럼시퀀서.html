@@ -53,7 +53,7 @@
         </div>
 
         <div class="cell green" id="cell8">
-          <div class="key">8</div>
+          <div class="key">8</div>ㄴ
           <div class="instrument">Tom 2</div>
         </div>
 
@@ -69,7 +69,67 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
     <script>
-      // 여기에 코드를 입력하세요.
+      // 드럼 소리 배열 생성(9개, 인덱스 0~8까지의 값으로 숫자키를 눌러 재생)
+      var audioFiles = [];
+
+      audioFiles.push(new Audio('audio/01_kick_drum.wav'));
+      audioFiles.push(new Audio('audio/02_closed_hihat.wav'));
+      audioFiles.push(new Audio('audio/03_open_hihat.wav'));
+      audioFiles.push(new Audio('audio/04_clap.wav'));
+      audioFiles.push(new Audio('audio/05_snap.wav'));
+      audioFiles.push(new Audio('audio/06_crash.wav'));
+      audioFiles.push(new Audio('audio/07_tom1.wav'));
+      audioFiles.push(new Audio('audio/08_tom2.wav'));
+      audioFiles.push(new Audio('audio/09_tambourine.wav'));
+
+      // 루프 재생
+      var loop = new Audio('audio/loop.mp3');
+
+      $('#play-btn').on('click', function() {
+        loop.play();
+      });
+
+      $('#stop-btn').on('click', function() {
+        loop.pause();
+        loop.currentTime = 0;
+      })
+
+      // 키보드를 누를 때(onkeydown) 키보드값(event['key'])에 따라 다른 음악 재생
+      $(document).keydown(function(event) {
+        // event의 key값을 받아 1~9인 경우 addClass 함수 호출, 소리 재생
+        var number = event.key; 
+        if (number >= 1 && number <= 9) {
+          addClass(number);
+          // audioFiles의 배열은 0부터 시작하므로 키보드 숫자값(number 형태로 캐스팅) - 1 한 인덱스를 넣어줌
+          var cur = audioFiles[Number(event.key) - 1];
+          cur.currentTime = 0; // 재생 전에 시작 초를 0으로 지정하여 초기화되도록 함
+          cur.play(); // 해당 인덱스의 오디오를 재생
+        }
+      })
+
+      // 키보드를 뗄 때(playing 클래스 추가)
+      $(document).keyup(function(event) {
+        var number = event.key; 
+        if (number >= 1 && number <= 9) {
+          removeClass(number);
+        }
+      })
+
+      function addClass(number) {
+        console.log(`#cell${number} id에 클래스 추가!`);
+
+        // jquery.addClass('추가할 메소드 여러개면 띄어쓰기로 구분')로 클래스 추가
+        // vanilla js : element.classList.add(클래스) // contains 존재여부 확인 여러개 컴마로 구분
+        // removeClass(클래스).add(새로운 클래스) // attr('class', '새로 지정할 클래스') // hasClass(클래스) 존재여부 확인
+        $(`#cell${number}`).addClass('playing');
+      }
+
+      function removeClass(number) {
+        $(`#cell${number}`).removeClass('playing');
+      }
+      
+      // undefined : 변수에 할당되지 않음, null : 비어있는 값(js에서 선언만 된 변수는 undefined 값을 가짐)
+      // NaN : Not a Number, 숫자가 아닌 것을 숫자로 표현하려 할 때(ex 문자열을 parseInt 처리)
     </script>
   </body>
 </html>
