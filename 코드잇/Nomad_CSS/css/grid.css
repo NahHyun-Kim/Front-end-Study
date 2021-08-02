@@ -1,0 +1,11 @@
+.father {
+  display: grid; /* 부모에 grid 속성 적용*/
+  grid-template-columns: 20px 55px 89px 100px; /* 사용할 column의 사이즈를 지정 가능 */
+}
+
+.child {
+  background: skyblue;
+  color: blue;
+  font-size: 50;
+  display: flex;
+}

@@ -37,8 +37,8 @@
 .child {
   background: blue;
   /* width를 지정하더라도 flexbox는 요소가 모두 한 줄에 오도록 배치함(=박스 6개가 한줄에 있을 경우 지정한 200px 이하로 너비가 줄어들 수 있음) */ 
-  /* width: 200px;
-  height: 200px; */
+  flex-basis: 250px;
+  height: 200px;
   /* div 기본 속성 : block */
   /* block 속성 유지(box속성, 너비&높이 적용 가능) <-> inline(text, box가 아님) */
   display: inline-block;
@@ -60,8 +60,11 @@
     3) flex-shrink, flex-grow: 자식에게만 적용 가능한 속성(반응형 디자인에 많이 사용)
     * flex-shrink: element의 행동을 정의(1이 기본값, 2로 설정할 경우 다른 상자에 비해 2배 많이 줄어듬!)
     * flex-grow: shrink의 반대(0이 기본값, 1로 설정하면 다른 상자에 비해 2배 더 커짐. 박스 주변의 공간이 남아있다면 다 차지함)
+
+    4) flex-basis : main axis를 기준으로 크기 적용(px 또는 % 등 가능), shrink/grow가 적용되기 전 자식의 크기를 정의한다.
   */
   flex-shrink: 1;
+  flex-grow: 1;
   /* align-self: center;
   order: 1; */
 }
