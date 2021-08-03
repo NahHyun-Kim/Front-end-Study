@@ -1,6 +1,11 @@
 .father {
   display: grid; /* 부모에 grid 속성 적용*/
-  grid-template-columns: 20px 55px 89px 100px; /* 사용할 column의 사이즈를 지정 가능 */
+  grid-template-columns: 200px 200px 200px; /* 사용할 column의 개수, 사이즈(너비)를 지정 가능 */
+  grid-template-rows: 100px 200px 300px;
+  /* column-gap : 세로 간 간격(1,2,3 사이), row-gap : 줄 간 간격(1,4,7 사이)
+    * 한 번에 gap : 10px; 과 같이 선언할 수 있다. */
+  column-gap: 10px; 
+  row-gap: 10px;
 }
 
 .child {
