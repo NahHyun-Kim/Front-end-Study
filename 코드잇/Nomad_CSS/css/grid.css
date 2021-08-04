@@ -14,3 +14,52 @@
   font-size: 50;
   display: flex;
 }
+
+/*
+  1) grid-template-areas: 를 통해 줄마다 공간을 디자인(.class에서 grid-area : 사용할 이름 지정 후 그 이름으로 정의)
+  2) grid-column(/row)-start(/end): column(세로줄의 시작부터 끝), row(가로줄의 시작부터 끝)의 시작점과 끝 점을 정하여 해당하는 만큼 grid 적용
+    * shortcuts : grid-column : 1 / 5; 와 같이 함께 선언(=start, end를 따로 하는것과 같다) 또는 1 / -1 같이 줄수를 알지 못해도 지정 가능
+    * span n : 가진 cell의 개수를 적어줌(ex. header의 경우 span 4), 가로 세로 모두 적용 가능하다(공간 차지)
+*/
+
+.grid {
+  display: grid;
+  /* repeat(반복 횟수, 길이 지정)을 통해 편하게 작성 */
+  /* auto를 통해 가능한 공간을 모두 사용, 그 후 200px같이 지정된 크기만큼 공간을 가짐
+  * line-naming을 통해 [First-line] 100px [Second-line] 100px ... [Fifth-line] 과 같이 라인에 이름 지정 가능, 
+  */
+  grid-template-columns: repeat(4, 100px); /* auto 200px; */
+  grid-template-rows: repeat(4, 100px [my-line]);
+  /* 원하는 공간을 디자인할 수 있음, header라고 인식하기 위해 
+  .header 클래스에 grid-area : 이름 으로 지정 
+  grid-template-areas: 
+  "header header header header"
+  "content content content nav"
+  "content content content nav"
+  "footer footer footer footer";
+  */
+}
+
+.header {
+  background-color: skyblue;
+  /* column의 세로 기준으로 생각 : 1번째 줄에서 2번째 줄 = 1칸(1~5번째 줄 : 4칸)..  1 / 5*/
+  grid-column: span 4; /* 1 / -1처럼 적지 않아도, 가진 cell 개수를 적어줌 */ 
+}
+
+.content {
+  background-color: lightyellow;
+  grid-column: 1 / -2 ;
+  /* content, nav같이 row의 전체를 차지하지 않고 이를 2, 3번째 줄에 적용하고 싶다면(row의 선을 가로로 셈)
+    2번째부터 3번째 줄에 해당 grid가 적용됨(4=맨 위 가로줄부터 4번째 줄(3번째 칸 밑까지)) */
+  grid-row: span 2; /* 2개를 가지며(2줄), 2번째 부터 시작 */
+}
+
+.nav {
+  background-color: plum;
+  grid-row: span 2;
+}
+
+.footer {
+  background-color: orange;
+  grid-column: span 4; /* -1은 가장 끝까지, -2, -3, -4.. 순으로 거슬러 올라간다(줄을 꼭 알지 않아도 됨!) */
+}

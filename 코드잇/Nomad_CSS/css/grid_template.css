@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  gap: 10px;
+  height: 50vh; /* 화면의 절반 */
+  /* fr(fraction, grid에서 사용 가능한 공간), body의 모든 부분을 가짐(width가 500px라면 그 안에서 나누어 가짐) */
+  grid-template-columns: repeat(4, 1fr);
+  /* 높이의 경우 지정해야 함(grid는 기본 높이가 없다) : height = 50vh 지정하면 절반의 4분의 1씩 가짐 */
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.header {
+  background-color: red;
+}
+
+.content {
+  background-color: orange;
+}
+
+.nav {
+  background-color: yellow;
+} 
+
+.footer {
+  background-color: green;
+}
