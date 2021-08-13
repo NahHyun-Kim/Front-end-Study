@@ -1,0 +1,51 @@
+.grid {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, 100px);
+  /* 4*4 = 16개 이상일 경우 예상하지 못한 추가 데이터에 대한 크기 지정(높이 200px) 
+    또는 grid-template-rows : 100px와 같이 모든 row에 대한 자동화 지정이 가능함 */
+  grid-auto-columns: 1fr; 
+  grid-auto-flow: column;
+}
+
+.item:nth-child(odd) {
+  background-color: mediumseagreen;
+}
+
+.item:nth-child(even) {
+  background-color: skyblue;
+}
+
+/* 
+  생각한 data보다 더 많은 내용을 가져온 경우 row나 col을 grid-auto- 사용(default value를 자동으로 주어 row/col 생성)
+  1) grid-auto-rows
+  2) grid-auto-columns
+  3) grid-auto-flow : column/row 
+    * column : 데이터가 더 많을 경우 더 많은 컬럼을 만들어 새로 배치(4*4일 경우, 위에서 아래로 1234 두번째 컬럼에 5678.. + 컬럼 수를 늘림)
+      grid-auto-columns: 100px;를 함께 지정해 사이즈 균일하게 맞출 수 있음
+    * row : 더 많은 줄(row)을 만들어 배치
+*/
+
+/*
+  minmax(최소, 최대 크기 지정) : repeat(n, minmax(최소 크기, 최대 크기)); 를 통해 지정하면 최소크기 이상으로 줄어들지 않음
+*/
+
+.auto_grid {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-rows: repeat(5, minmax(100px, 1fr));
+}
+
+/*
+  1) auto-fill : 정확한 사이즈 column 생성(100px을 유지하며, 나머지 공간(해당 row를)을 채움), 정해진 공간을 잡고 빈 공간에서 다음 div를 배정
+  2) auto-fit : 유동적 사이즈 fit(딱 맞춤), 한 줄의 너비만큼 길이를 늘려 채움(stretch), 다음 div가 생기면 전체 요소의 사이즈가 조금씩 줄어듬(1/5와 1/6의 차이)
+*/
+.auto_grid:first-child {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.auto_grid:last-child {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

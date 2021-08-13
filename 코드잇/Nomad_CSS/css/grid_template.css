@@ -1,25 +1,62 @@
 .grid {
   display: grid;
-  gap: 10px;
+  background: lightyellow;
+  gap: 5px;
   height: 50vh; /* 화면의 절반 */
   /* fr(fraction, grid에서 사용 가능한 공간), body의 모든 부분을 가짐(width가 500px라면 그 안에서 나누어 가짐) */
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 100px);
   /* 높이의 경우 지정해야 함(grid는 기본 높이가 없다) : height = 50vh 지정하면 절반의 4분의 1씩 가짐 */
-  grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px); 
+  /* 1) justify-items의 기본값(stretch) : 가로, grid-container가 grid를 가지고 있으면, 그 grid를 늘여서 grid 자체를 채우게 함 
+     * start(해당 grid 공간에서 시작점부터), center(중심), end(끝쪽으로) 
+     2) align-items : 세로, 높이를 지정할 경우 나타남(stretch를 제외하고는 높이 지정)
+     3) place-items : 수직 수평으로 한번에 나타냄(=밑의 경우 수직으로는 strech, 수평으로는 가운데 위치) 
+     place-items: stretch center;
+
+     items : cell중의 하나, content : 전체 grid의 위치를 조정(전체 grid-container에 존재하는 grid) 
+     * place-content : 수직 수평(위와 같음, 전체 grid를 수직-수평으로 움직임) */
+    
+    justify-content: space-evenly;
+    align-content: stretch; /* row 간의 높이(수직) 제어, start가 기본 (fr로 설정 후 stretch 설정 -> 높이만큼 컬럼 높이 늘어남) */
+    
+
+  /*
+    grid-template: row의 사이즈를 정해야 함(row의 높이) / 1fr 1fr..(각 컬럼마다의 너비 지정)
+  /* 
+  grid-area: 이름 지정 후, 지정한 이름으로 템플릿 틀을 만듬
+  [header-start] "header..." 1fr [header-end]와 같이 이름을 붙일 수 있다.
+  grid-template:  
+  
+  "header header header header" 1fr
+  "content content content nav" 2fr
+  "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr
+  */
+
 }
 
+
+/*
+  child에게만 적용되는 property (self)
+  1) align-self
+  2) justify-self
+  3) place-self(수직 수평)
+*/
 .header {
   background-color: red;
+  /* grid-area: header; */
 }
 
 .content {
   background-color: orange;
+  /* grid-area: content; */
 }
 
 .nav {
   background-color: yellow;
+  /* grid-area: nav; */
 } 
 
 .footer {
   background-color: green;
+  /* grid-area: footer; */
 }
